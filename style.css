@@ -1,0 +1,115 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to bottom, rgb(223, 170, 72) 40%, rgb(72, 139, 165) );
+    font-family: sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    width: 300px;
+    backdrop-filter: blur(6px);
+    border-radius: 30px;
+    box-shadow: 0 30px 50px #5553;
+    padding: 30px;
+}
+
+form {
+    border: 1px solid #5553;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+form input,
+form button {
+    border: none;
+    background-color: transparent;
+    padding: 10px;
+    outline: none;
+    flex: 1;
+}
+
+form input {
+    flex: 3;
+}
+
+form i {
+    opacity: 0.7;
+    font-size: 1.2rem;
+}
+
+.result .name {
+    padding: 20px;
+    text-align: center;
+    font-size: large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.temperature img {
+    font-size: 3rem;
+    display: block;
+    margin: auto;
+}
+
+.description {
+    padding: 10px 0 30px;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+li {
+    background-color: #f78a55;
+    color: #fff;
+    border-radius: 10px;
+    padding: 20px 10px;
+    background-image: linear-gradient(to bottom, transparent 50%, #0003 50%);
+    font-weight: bold;
+    font-size: small;
+    text-align: center;
+}
+
+li i {
+    font-size: 2em;
+    margin: 10px 0;
+    display: block;
+}
+
+li:nth-child(2) {
+    background-color: #b56291;
+}
+
+li:nth-child(3) {
+    background-color: #48567b;
+}
+
+main.error {
+    animation: errorEffect 0.3s linear 2;
+}
+
+@keyframes errorEffect {
+    0%   { transform: translate(10px, 5px); }
+    25%  { transform: translate(-5px, 0); }
+    50%  { transform: translate(8px, 2px); }
+    75%  { transform: translate(-2px, 5px); }
+    100% { transform: translate(0, 0); }
+}
